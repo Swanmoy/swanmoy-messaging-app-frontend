@@ -10,14 +10,16 @@ import MicIcon from "@mui/icons-material/Mic";
 export default function Chat(props) {
   const [input, setInput] = useState("");
   const sendMessage = (e) => {
-    e.preventDefault();
-    const messageDetails = {
-      sender: props.loggedUser,
-      message: input,
-      receiver: props.currentChat,
-    };
-    axios.post("/message/add", messageDetails);
-    setInput("");
+    if (input !== "") {
+      e.preventDefault();
+      const messageDetails = {
+        sender: props.loggedUser,
+        message: input,
+        receiver: props.currentChat,
+      };
+      axios.post("/message/add", messageDetails);
+      setInput("");
+    }
   };
   return (
     <div className='chat'>
