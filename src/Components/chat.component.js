@@ -19,6 +19,8 @@ export default function Chat(props) {
       };
       axios.post("/message/add", messageDetails);
       setInput("");
+    } else {
+      e.preventDefault();
     }
   };
   return (
@@ -64,7 +66,8 @@ export default function Chat(props) {
             type='text'
             value={input}
             onChange={(e) => {
-              setInput(e.target.value);
+              if (e.target.value === " ") setInput("");
+              else setInput(e.target.value);
             }}
             placeholder='Please enter your message to send'
           />
