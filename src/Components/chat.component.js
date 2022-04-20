@@ -64,6 +64,7 @@ export default function Chat(props) {
             onChange={(e) => {
               setInput(e.target.value);
             }}
+            placeholder='Please enter your message to send'
           />
           <button type='submit' onClick={sendMessage}>
             Send a message
