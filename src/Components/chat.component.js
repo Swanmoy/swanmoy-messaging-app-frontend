@@ -10,7 +10,11 @@ import MicIcon from "@mui/icons-material/Mic";
 export default function Chat(props) {
   const [input, setInput] = useState("");
   const sendMessage = (e) => {
-    if (input !== "" && props.loggedUser !== "default") {
+    if (
+      input !== "" &&
+      props.loggedUser !== "default" &&
+      props.currentChat !== ""
+    ) {
       e.preventDefault();
       const messageDetails = {
         sender: props.loggedUser,
