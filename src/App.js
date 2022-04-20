@@ -17,7 +17,7 @@ function App() {
   const [currentChat, setCurrentChat] = useState("");
   useEffect(() => {
     setLoggedUser(window.sessionStorage.getItem("loggedUser") || "default");
-    setCurrentChat(window.sessionStorage.getItem("currentChat"));
+    setCurrentChat(window.sessionStorage.getItem("currentChat") || "");
   }, [loggedUser, currentChat]);
   useEffect(() => {
     const messageDetails = { sender: loggedUser, receiver: currentChat };
