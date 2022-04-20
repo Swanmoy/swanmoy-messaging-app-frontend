@@ -1,0 +1,33 @@
+.logout_component {
+    position: fixed;
+    width: 7vw;
+    height: 15vh;
+    top: 12vh;
+    left: 28vw;
+    z-index: 2;
+    background-color: #ededed;
+    box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    transition: opacity 0.2s linear;
+}
+
+.logout_component>p {
+    margin-left: 25px;
+    margin-top: 20px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.logout_component>span {
+    width: 100%;
+    padding-left: 25px;
+    font-size: 12px;
+    transition: font-size 0.1s linear;
+}
+
+.logout_component>span:hover {
+    cursor: pointer;
+    color: rgb(30, 181, 219);
+    font-size: 14px;
+}
